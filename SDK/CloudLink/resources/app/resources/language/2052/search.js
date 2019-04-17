@@ -1,0 +1,22 @@
+module.exports={
+    "SEARCH_VIEW_MORE":"查看更多",
+    "SEARCH_NO_MATCH_RESULT":"没有匹配的结果",
+    "SEARCH_NO_MORE_RESULTS":"没有更多结果",
+    "SEARCH_LOADING":"加载中",
+    "SEARCH_TYPE_A_WORD_TO_SEARCH":"键入以搜索",
+    "SEARCH_CONTACTS":"联系人",
+    "SEARCH_GROUP":"群组",
+    "FILE_NO_EXIST":"文件不存在",
+    "SEARCH_CHAT_HISTORY":"消息",
+    "SEARCH_FILE":"文件",
+    "SEARCH_FRO_EVERYTHING":"搜索联系人、群组、消息、文件",
+    "SEARCH_CANNOT_CHAT_WITH_YOURSELF":"暂不支持与自己发起会话",
+    "MOBILE_SEARCH":"搜索",
+    "MOBIL_CONTACT":"联系人",
+    "HISTORY_MESSAGE":"历史消息",
+    "DIRECT_CALL":"直接呼叫",
+    "CURRENT_NUMBER":"当前号码",
+    "SEARCH_YOU_CAN_SEARCH":"您可以搜索",
+    "SEARCH_SEE_MORE_CONTACT":"查看更多联系人",
+    "SEE_MORE_GROUPS": "查看更多群组"
+}

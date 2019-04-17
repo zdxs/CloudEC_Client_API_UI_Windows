@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>CloudLink</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <!--<script src="bin/config/userConfig.js"></script>
+  <script src="start.js"></script>
+  <script src="YUVCanvas.js"></script>-->
+  <style>
+    .onfocusline {
+      width: 91%;
+      height: 1px;
+      background: #CCCCCC;
+      margin-top: 3px;
+    }
+    
+    #pyramid {
+      position: fixed;
+      margin: 10px auto;
+      height: 19px;
+      width: -2px;
+      top: 448px;
+      left: 35px;
+    }
+    
+    #pyramid>div {
+      position: absolute;
+      border-style: solid;
+      border-width: 8px 7px 0 7px;
+    }
+    
+    #pyramid>div:first-child {
+      border-color: rgba(50, 50, 50, 0.6) transparent transparent transparent;
+    }
+    
+    @keyframes opacity2 {
+      0% {
+        opacity: 0
+      }
+      50% {
+        opacity: .8;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @-webkit-keyframes opacity2 {
+      0% {
+        opacity: 0
+      }
+      50% {
+        opacity: .8;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @-moz-keyframes opacity2 {
+      0% {
+        opacity: 0
+      }
+      50% {
+        opacity: .8;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    #conflinkshow {
+      position: fixed;
+      align-items: center;
+      padding: auto;
+      width: 200px;
+      height: 100px;
+      background-color: rgba(50, 50, 50, 0.6);
+      top: 157px;
+      left: 186px;
+      display: flex;
+    }
+    
+    
+   
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <div class="search-area" id="searchArea" style="position: absolute;width: 44%;top: 40px;border: 1px solid #F7F7F7;border-radius: 4px;left: 14px;background: #F9F9F9;/* width: 26px; */font-size: 12px;height: 31px;box-shadow: 0 2 5 0;box-shadow: 0/2/5/0;">
+    <div class="search-box" style="display: flex;/* background: #F7F7F7; */margin-top: 8px;margin-left: 3px;">
+      <div class="search-btn" id= "secrchbtn">
+        <div class="" data-testid="" style="width: 16px; height: 16px;">
+          <svg viewBox="0 0 72 72" class="search-icon">
+            <path d="M31.4,50.6c10.6,0,19.3-8.6,19.3-19.3s-8.6-19.3-19.3-19.3s-19.3,8.6-19.3,19.3S20.8,50.6,31.4,50.6z M48.6,45.5l14.2,14.2 c0.1,1.6-1.1,3-2.7,3.2c-0.2,0-0.3,0-0.5,0L45.4,48.7c-3.8,3.1-8.7,5-14,5c-12.3,0-22.3-10-22.3-22.3s10-22.3,22.3-22.3 s22.3,10,22.3,22.3C53.7,36.7,51.8,41.6,48.6,45.5z"></path>
+          </svg>
+        </div>
+      </div>
+      <input type="text" id="selectContactSearch" placeholder="search..." value="" style="margin-left: 9px;width: 204px;border: none;outline: none;background: none;font-size: 12px;color: #000000;">
+    </div>
+
+  </div>
+  <div id="conflinkshowcontrol" class="opacity2" style="display:none">
+    <div id="conflinkshow">
+      <p id="conflinkshowP" style="font-family: 'Roboto Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif;font-size: 12px;padding-left: 4px;color: #FFFFFF;"></p>
+    </div>
+  </div>
+  <div style="
+    width: 10px;
+    height: 35px;
+    position: fixed;
+    top: 43px;
+    right: 275px;
+    border-left: 1px solid #CCCCCC;
+"></div>
+  <div style="
+    width: 545px;
+    height: 34px;
+    /* background-color: red; */
+    position: fixed;
+    top: 0px;
+    -webkit-app-region: drag;
+" oncontextmenu="return false"></div>
+  
+</body>
+<script src="../resources/config/userConfig.js"></script>
+<script>
+  var secrchbtn = document.getElementById('secrchbtn');
+  var inputbox = document.getElementById('selectContactSearch');
+  var searchArea = document.getElementById('searchArea');
+  var getsrcollTop = 0;
+  var getsrcollTopforRight = 0;
+  inputbox.addEventListener("input", function () {
+    var searchValue = inputbox.value;
+    memberItemInfo({ searchText: searchValue, opt: 'searchInfo' });
+    if(searchValue !== ''){
+      secrchbtn.style.display = "none";
+      searchArea.style.backgroundColor = "#FFFFFF";
+    }else{
+      secrchbtn.style.display = "";
+      searchArea.style.backgroundColor = "#F7F7F7";
+    }
+  })
+  
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var appName = window.CLIENTCONFIG.NEW_APP_NAME;
+    if(window.langcode === "2052"){
+      appName = window.CLIENTCONFIG.NEW_APP_CHINEASE_NAME;
+    }
+    if (appName) {
+      document.title = appName
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "keystate",
+  "version": "1.0.0",
+  "description": "system keystate support",
+  "main": "keystate.js",
+  "scripts": {
+    "test": "mocha ./keystate_test"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.0.2"
+  }
+}

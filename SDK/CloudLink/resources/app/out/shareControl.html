@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>CloudLink</title>
+  <link href="./css/dStyle.css" rel="stylesheet">
+</head>
+
+<body class="data-main-background">
+  <div id="root">
+  </div>
+
+  <script src="./libs/util.js"></script>
+  <script src="../resources/config/userConfig.js"></script>
+  <script src="./js/vendor.js"></script>
+  <script type="text/javascript" src="./libs/umeditor.config.js"></script>
+  <script src="./js/dataControl.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var appName = window.CLIENTCONFIG.NEW_APP_NAME;
+      if(window.langcode === "2052"){
+        appName = window.CLIENTCONFIG.NEW_APP_CHINEASE_NAME;
+      }
+      if (appName) {
+        document.title = appName
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+var config={RELEASE_SERVER_ADDRESS:"",APP_DATA_PATH:"",APP_RELEASE_DATA_PATH:""};module.exports.setConfig=function(n){config=Object.assign({},config,n)},module.exports.getConfig=function(){return config};

@@ -1,0 +1,22 @@
+module.exports={
+    "CALLRECORD_CALLING":"Call",
+    "CONVERSATION":"Messages",
+    "RECENT_CONTACTS":"Recent contacts",
+    "SELECT_FROM_CONTACTS":"Select from contacts",
+    "NOTIFICATION_BAR_UNREAD":"[{0} unread]",
+    "FILES":"Files",
+    "COMMON_DELETE":"Delete",
+    "MOBIL_CHART":"Chat",
+    "MULTIDEVICE_PC_LOGINED":"You have logged in to the PC client.",
+    "MOBILE_MULTIDEVICE_PC_LOGINED":"CloudLink You have logged in to the PC client.",
+    "MARK_AS_UNREAD":"Mark as Unread",
+    "MARK_AS_READ":"Mark as Read",
+    "YOU_HAVE_DISSOLVED_OR_LEFT_THE_GROUP":"You have dismissed or quit the group.",
+    "BUTTON_ADD":"Add",
+    "CREATE_NEW_GROUP":"New Group",
+    "RECENT_DELETE_CHECK_EDITOR":"The text box contains content. Are you sure you want to delete it?",
+    "RECENT_DELETE_CHECK_FILE_TRANSFER":"The file is being transferred. Deleting the chat will interrupt file transfer. Are you sure you want to delete it?",
+	"NO_CHAT":"No chat is available. Click '+' in the upper right corner to create one.",
+    "CHART_TYPE_FILE":"File",
+	"CONTACT_HAS_NO_USERNAME":"The contact does not have a user name."
+}

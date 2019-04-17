@@ -1,0 +1,23 @@
+module.exports={
+    "RECENT_DELETE_CHECK_EDITOR":"La zone de texte n'est pas vide. Voulez-vous vraiment la supprimer ?",
+    "RECENT_DELETE_CHECK_FILE_TRANSFER":"Transfert du fichier en cours. La suppression de la discussion interrompra le transfert de fichiers. Voulez-vous vraiment la supprimer ?",
+    "CHART_TYPE_FILE":"Fichier",
+    "NO_CHAT":"Aucune discussion disponible. Cliquez sur + dans l'angle supérieur droit pour en créer une.",
+    "CONTACT_HAS_NO_USERNAME":"Le contact ne possède pas de nom d'utilisateur.",
+    "CALLRECORD_CALLING":"Appel",
+    "CONVERSATION":"Messages",
+    "CREATE_NEW_GROUPSESSION":"Nouvelle discussion",
+    "RECENT_CONTACTS":"Contacts récents",
+    "SELECT_FROM_CONTACTS":"Sélectionner à partir des contacts",
+    "NOTIFICATION_BAR_UNREAD":"[{0} non lu(s)]",
+    "FILES":"Fichiers",
+    "COMMON_DELETE":"Supprimer",
+    "MOBIL_CHART":"Discussion",
+    "MULTIDEVICE_PC_LOGINED":"Vous vous êtes connecté au client PC.",
+    "MOBILE_MULTIDEVICE_PC_LOGINED":"CloudLink Vous vous êtes connecté au PC client.",
+    "MARK_AS_UNREAD":"Marquer comme non lu",
+    "MARK_AS_READ":"Marquer comme lu",
+    "YOU_HAVE_DISSOLVED_OR_LEFT_THE_GROUP":"Vous avez supprimé ou quitté le groupe.",
+    "BUTTON_ADD":"Ajouter",
+    "CREATE_NEW_GROUP":"Nouveau groupe"
+}

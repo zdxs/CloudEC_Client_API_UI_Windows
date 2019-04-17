@@ -1,0 +1,23 @@
+module.exports={
+    "HISTORY_MESSAGE":"Historique des messages",
+    "DIRECT_CALL":"Appeler directement",
+    "CURRENT_NUMBER":"numéro actuel",
+    "SEARCH_YOU_CAN_SEARCH":"Vous pouvez rechercher",
+    "SEARCH_SEE_MORE_CONTACT":"Afficher plus de contacts",
+    "SEARCH_VIEW_MORE":"Plus",
+    "SEARCH_NO_MATCH_RESULT":"Aucun résultat trouvé.",
+    "SEARCH_NO_MORE_RESULTS":"Plus aucun résultat.",
+    "SEARCH_LOADING":"Chargement en cours…",
+    "SEARCH_TYPE_A_WORD_TO_SEARCH":"Saisissez un mot à rechercher.",
+    "SEARCH_VIEW_CORPORATE_ADDRESS_BOOK":"Rechercher dans le répertoire professionnel",
+    "SEARCH_CONTACTS":"Contacts",
+    "SEARCH_GROUP":"Groupe",
+    "FILE_NO_EXIST":"Le fichier n'existe pas.",
+    "SEARCH_CHAT_HISTORY":"Messages",
+    "SEARCH_FILE":"Fichiers",
+    "SEARCH_FRO_EVERYTHING":"Recherchez un contact, un groupe, un message ou un fichier.",
+    "SEARCH_CANNOT_CHAT_WITH_YOURSELF":"Vous ne pouvez pas discuter avec vous-même.",
+    "MOBILE_SEARCH":"Rechercher",
+    "MOBIL_CONTACT":"Contacts",
+    "SEE_MORE_GROUPS":"Afficher plus de groupes"
+}
