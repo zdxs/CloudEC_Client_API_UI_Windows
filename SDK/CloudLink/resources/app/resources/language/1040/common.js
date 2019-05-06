@@ -24,6 +24,7 @@ module.exports={
     "COMMON_ALERT":"Informazioni",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Hai una chiamata in corso. Disconnettere?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Hai una chiamata in corso. Uscire?",
+    "COMMON_CHECK_QUIT_OFFLINE":"You're on the phone. Are you sure you want to go offline?",
     "COMMON_EXIT_THE_PROMPT":"Chiamata in corso. Puoi andare offline solo dopo aver chiuso la chiamata.",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"La funzione non è disponibile.",
     "COMMON_LOGOUT":"Disconnetti",

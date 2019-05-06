@@ -95,7 +95,7 @@ module.exports={
     "CONFERENCE_INVITE_ENTER_CONF":" vous invite à rejoindre la conférence.",
     "MULTIDEVICE_SIP_REG_FAILED":"Échec de la connexion au réseau. Vérifiez les paramètres du réseau.",
     "CALL_FAILED_OFFLINE":"Réseau indisponible. Vérifiez la connexion au réseau.",
-    "SHAREING_REQUEST_REMOTECONTROL":"{0} a demandé le contrôle à distance de votre bureau.",
+    "SHAREING_REQUEST_REMOTECONTROL":"a demandé le contrôle à distance de votre bureau.",
     "SHAREING_AGREE_REMOTECONTROL":"Accepter",
     "VIDEO_CLOSE_PIP":"Masquer le petit volet",
     "VIDEO_OPEN_PIP":"Afficher le petit volet",

@@ -24,6 +24,7 @@ module.exports={
     "COMMON_ALERT":"Bilgi",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Devam eden bir aramanız var. Çıkış yapmak istediğinizden emin misiniz?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Devam eden bir aramanız var. Çıkış yapmak istediğinizden emin misiniz?",
+    "COMMON_CHECK_QUIT_OFFLINE":"Devam eden bir aramanız var. Çıkış yapmak istediğinizden emin misiniz?",
     "COMMON_EXIT_THE_PROMPT":"Arama devam ediyor. Yalnızca aramadan çıktıktan sonra çevrimdışı olabilirsiniz.",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"Bu işlev kullanılabilir değil.",
     "COMMON_LOGOUT":"Çıkış Yap",

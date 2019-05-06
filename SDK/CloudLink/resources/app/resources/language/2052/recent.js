@@ -11,7 +11,6 @@ module.exports={
     "MOBILE_MULTIDEVICE_PC_LOGINED":"CloudLink PC客户端已登录",
     "MARK_AS_UNREAD":"标为未读",
     "MARK_AS_READ":"标为已读",
-    "YOU_HAVE_DISSOLVED_OR_LEFT_THE_GROUP":"您已解散或退出该群组",
     "BUTTON_ADD":"添加",
     "CREATE_NEW_GROUP":"创建新群组",
     "RECENT_DELETE_CHECK_EDITOR":"输入框中存在内容，确定删除？",

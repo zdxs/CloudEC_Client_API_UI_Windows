@@ -2,6 +2,7 @@ module.exports={
     "ADDRESS_EMPTY":"Saisir l'adresse du serveur",
     "ENTER_DEVICE_SET":"Paramètres de conférence",
     "END_CONFERENCE":"Réunion terminée.",
+    "PC_ONLINE_EXIST_CONFERNECE": "PC client is logged, please re-enter the meeting from PC.",
     "EXIT_CONFERENCE":"A quitté la réunion.",
     "DISPLAY_CONTROL":"Afficher le contrôle de conférence",
     "HIDE_CONTROL":"Masquer le contrôle de conférence",

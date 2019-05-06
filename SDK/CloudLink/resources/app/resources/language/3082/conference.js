@@ -258,6 +258,7 @@ module.exports={
     "ENTER_CONF_TEMP_ACS_PWD_NULL":"La contraseña de reunión temporal no puede estar vacía.",
     "ENTER_CONF_TOP_TITLE":"Unirse a la reunión",
     "ENTER_MY_MEET_ROOM":"Entrar en mi sala de reuniones",
+    "PC_ONLINE_EXIST_CONFERNECE": "PC client is logged, please re-enter the meeting from PC.",
     "EXIT_CONFERENCE":"Salió de la reunión.",
     "FAILED_RELEASE_THE_CHAIR":"No se ha podido liberar el papel de organizador. Inténtelo de nuevo más tarde.",
     "FAILED_THEN_LOGIN":"Error de autenticación. Vuelva a iniciar sesión.",

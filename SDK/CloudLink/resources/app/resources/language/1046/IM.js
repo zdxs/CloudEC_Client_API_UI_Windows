@@ -20,7 +20,7 @@ module.exports={
     "QUOTE":"Cotação",
     "RECEIVE_FAIL":"Falha no recebimento.",
     "RESEND_END":"Reenviar",
-    "SAVE_SUCCESS":"Salvo com sucesso.",
+    "SAVE_SUCCESS":"Salvo com sucesso!",
     "SCREEN_SHOT":"Captura de tela",
     "SEND":"Enviar",
     "SEND_FAIL":"Falha no envio.",
@@ -42,5 +42,6 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"O tamanho de {0} excedeu o máximo ({1}).",
     "FILESEND_BAN_FILE_TYPE":"Alguns arquivos não foram enviados. Tipos de arquivos {0} não são permitidos.",
     "ALBUM":"Álbum",
-    "BUSINESS_CARD":"Cartão de nome"
+    "BUSINESS_CARD":"Cartão de nome",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 }

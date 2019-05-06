@@ -23,7 +23,7 @@ module.exports={
     "HIDE_CURRENT_WINDOW":"Masquer la fenêtre active lors de la capture d'écran",
     "IM_DIALOG_TODAY":"Aujourd'hui",
     "IM_DIALOG_YESTERDAY":"Hier",
-    "SAVE_SUCCESS":"Enregistrement réussi.",
+    "SAVE_SUCCESS":"Enregistrement réussi!",
     "SCREEN_SHOT":"Capture d'écran",
     "SHOW_CURRENT_WINDOW":"Afficher la fenêtre active lors de la capture d'écran",
     "FIND_MORE_RECORDS":"Plus d'enregistrements",
@@ -42,5 +42,6 @@ module.exports={
     "DOWNLOAD":"Télécharger",
     "QUOTE":"Citer",
     "MORE":"Plus",
-    "FILE_SEND_BAN_FILE_MIN_SIZE":"Le fichier {0} doit être renseigné."
+    "FILE_SEND_BAN_FILE_MIN_SIZE":"Le fichier {0} doit être renseigné.",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "Le nom de fichier du fichier {0} est supérieur à la limite de 246 mots."
 }

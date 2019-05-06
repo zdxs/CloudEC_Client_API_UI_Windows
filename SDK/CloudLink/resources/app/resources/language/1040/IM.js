@@ -20,7 +20,7 @@ module.exports={
     "QUOTE":"Offerta",
     "RECEIVE_FAIL":"Errore ricezione.",
     "RESEND_END":"Invia di nuovo",
-    "SAVE_SUCCESS":"Salvataggio riuscito.",
+    "SAVE_SUCCESS":"Salvataggio riuscito!",
     "SCREEN_SHOT":"Schermata",
     "SEND":"Invia",
     "SEND_FAIL":"Invio non riuscito.",
@@ -42,7 +42,8 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"La dimensione {0} supera il limite {1}.",
     "FILESEND_BAN_FILE_TYPE":"Alcuni file non sono stati inviati e i file di tipo {0} non possono essere inviati.",
     "ALBUM":"galleria",
-    "BUSINESS_CARD":"Biglietto da visita"
+    "BUSINESS_CARD":"Biglietto da visita",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 
 
 

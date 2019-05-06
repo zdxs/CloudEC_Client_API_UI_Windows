@@ -258,6 +258,7 @@ module.exports={
     "ENTER_CONF_TEMP_ACS_PWD_NULL":"A senha da reunião temporária não pode ficar em branco.",
     "ENTER_CONF_TOP_TITLE":"Ingressar na reunião",
     "ENTER_MY_MEET_ROOM":"Entrar na sala de reunião",
+    "PC_ONLINE_EXIST_CONFERNECE": "PC client is logged, please re-enter the meeting from PC.",
     "EXIT_CONFERENCE":"Saiu da reunião.",
     "FAILED_RELEASE_THE_CHAIR":"Falha ao liberar a função de presidente. Tente novamente mais tarde.",
     "FAILED_THEN_LOGIN":"Falha de autenticação. Faça login novamente.",

@@ -25,6 +25,7 @@ module.exports={
     "COMMON_ALERT":"Информация ",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Выполняется вызов. Выйти?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Выполняется вызов. Выйти?",
+    "COMMON_CHECK_QUIT_OFFLINE":"Выполняется вызов. Выйти?",
     "COMMON_EXIT_THE_PROMPT":"Выполняется вызов. Вы можете отключиться от сети только после завершения разговора.",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"Функция недоступна.",
     "COMMON_LOGOUT":"Выйти",

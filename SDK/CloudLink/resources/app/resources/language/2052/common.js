@@ -124,7 +124,6 @@ module.exports = {
   "CALL_PHONE_OFFICE4": "办公电话4",
   "CALL_OUT": "呼出",
   "CHANGE_PASSWORD_TIPS_TWO": "密码至少包含一个大写字母，一个小写字母，和一个数字（不能包含英文双引号）。",
-  "SEARCH_NO_SEARCH_HISTORY": "暂无搜索记录",
   "CONFERENCE_PARTICIPANT": "与会者",
   "CONFERENCE_MORE": "更多",
   "COMMON_EXIT_THE_PROMPT": "当前正在通话，只有退出后才能离线",
@@ -152,6 +151,5 @@ module.exports = {
   "LOG_COMPRESS_PROMPT": "正在收集日志",
   "EMPTY_MESSAGE": "消息为空",
   "UNDER_ATTACK": "受到攻击，该消息无法正常显示",
-  "MOBILE_NEWS": "消息",
   "INVALID_ENCRYPT_FILE_FOUND_CONTENT": "文件已损坏或者被篡改，请重新安装程式"
 }

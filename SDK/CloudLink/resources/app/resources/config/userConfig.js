@@ -96,8 +96,8 @@ var CLIENTCONFIG = {
   "Device.ComCfg.Media.TmmbrControl": "1",
   "Device.ComCfg.Media.TotalBandwidth": "2048",
   "Device.ComCfg.Media.Mobile.WifiSoftCodedTotalBandwidth": "4096",
-  "Device.ComCfg.Media.Mobile.4GTotalBandwidth": "1024",
-  "Device.ComCfg.Media.Mobile.3GTotalBandwidth": "512",
+  "Device.ComCfg.Media.Mobile.4GTotalBandwidth": "4096",
+  "Device.ComCfg.Media.Mobile.3GTotalBandwidth": "4096",
 
   "Device.ComCfg.Media.VideoARS": "1",
   "Device.ComCfg.Media.VideoARSFrameSize": "1",
@@ -232,9 +232,9 @@ var CLIENTCONFIG = {
   ACS_MANUFACTUREROUI_TYPE: 'string',
 
   ACS_SOFTWAREVERSION_NAME: 'Device.DeviceInfo.SoftwareVersion',
-  ACS_SOFTWAREVERSION_VALUE: '6.1.131',
-  ACS_SOFTWAREVERSION_CODE_ANDROID: '131',
-  ACS_SOFTWAREVERSION_CODE_IOS: '131',
+  ACS_SOFTWAREVERSION_VALUE: '6.1.154',
+  ACS_SOFTWAREVERSION_CODE_ANDROID: '154',
+  ACS_SOFTWAREVERSION_CODE_IOS: '154',
 
   ACS_SOFTWAREVERSION_TYPE: 'string',
 
@@ -366,7 +366,7 @@ var CLIENTCONFIG = {
 
 
   BURIED_POST_ADDR: "",//"http://app.huawei.com/hwa-c/open/dc", // 生产 : "http://app.huawei.com/hwa-c/open/dc"  测试："http://nkweb-sit.huawei.com/hwa-c/open/dc"
-  NEW_APP_NAME: "Huawei Meeting",
+  NEW_APP_NAME: "Huawei Meeting",//Workplace或者Huawei Meeting
   NEW_APP_CHINEASE_NAME: "华为会议",
   USER_LOG_MAX_FILES: 3,
   "Device.ComCfg.Conf.IsAllowRecord": "1" ,

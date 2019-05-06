@@ -8,7 +8,7 @@ module.exports = {
     "HIDE_CURRENT_WINDOW": "Hide the active window when capturing screenshots",
     "IM_DIALOG_TODAY": "Today",
     "IM_DIALOG_YESTERDAY": "Yesterday",
-    "SAVE_SUCCESS": "Saved successfully.",
+    "SAVE_SUCCESS": "Saved successfully!",
     "SCREEN_SHOT": "Screenshot",
     "SHOW_CURRENT_WINDOW": "Display the active window when capturing screenshots",
     "FIND_MORE_RECORDS": "More Records",
@@ -42,5 +42,6 @@ module.exports = {
     "TEMPORARILY_NOT_SUPPORTED": "Not supported",
     "BUSINESS_CARD": "Name card",
     "FILE_SEND_BAN_FILE_MIN_SIZE": "The file {0} cannot be empty.",
-    "RESEND_END": "Resend"
+    "RESEND_END": "Resend",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 }

@@ -8,7 +8,7 @@ module.exports = {
   "HIDE_CURRENT_WINDOW": "屏幕截图时隐藏当前窗口",
   "IM_DIALOG_TODAY": "今天",
   "IM_DIALOG_YESTERDAY": "昨天",
-  "SAVE_SUCCESS": "保存成功",
+  "SAVE_SUCCESS": "保存成功！",
   "SCREEN_SHOT": "截图",
   "SHOW_CURRENT_WINDOW": "屏幕截图时显示当前窗口",
   "FIND_MORE_RECORDS": "查找更多记录",
@@ -42,5 +42,6 @@ module.exports = {
   "TEMPORARILY_NOT_SUPPORTED": "暂不支持",
   "BUSINESS_CARD": "名片",
   "FILE_SEND_BAN_FILE_MIN_SIZE": "文件{0}不能为空",
-  "RESEND_END": "重新发送"
+  "RESEND_END": "重新发送",
+  "FILE_SEND_BAN_FILENAME_LENGTH": "文件{0}的文件名长度超过246字上限"
 }

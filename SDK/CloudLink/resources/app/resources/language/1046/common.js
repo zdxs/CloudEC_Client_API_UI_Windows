@@ -25,6 +25,7 @@ module.exports={
     "COMMON_ALERT":"Informação",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Você tem uma chamada em andamento. Tem certeza de que deseja sair?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Você tem uma chamada em andamento. Tem certeza de que deseja sair?",
+    "COMMON_CHECK_QUIT_OFFLINE":"You're on the phone. Are you sure you want to go offline?",
     "COMMON_EXIT_THE_PROMPT":"Chamada ativa. Só é possível ficar off-line depois de sair da chamada.",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"A função está indisponível.",
     "COMMON_LOGOUT":"Fazer logout",

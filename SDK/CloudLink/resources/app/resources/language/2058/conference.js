@@ -258,6 +258,7 @@ module.exports={
     "ENTER_CONF_TEMP_ACS_PWD_NULL":"La contraseña temporaria para la conferencia no puede quedar vacía.",
     "ENTER_CONF_TOP_TITLE":"Unirse a la conferencia",
     "ENTER_MY_MEET_ROOM":"Ingresar a Mi sala de reuniones",
+    "PC_ONLINE_EXIST_CONFERNECE": "PC client is logged, please re-enter the meeting from PC.",
     "EXIT_CONFERENCE":"Salió de la conferencia.",
     "FAILED_RELEASE_THE_CHAIR":"Error al liberar el rol principal. Vuelva a intentarlo más tarde.",
     "FAILED_THEN_LOGIN":"No se pudo autenticar. Volver a iniciar sesión.",

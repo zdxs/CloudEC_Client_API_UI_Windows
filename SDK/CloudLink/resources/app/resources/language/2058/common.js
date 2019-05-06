@@ -25,6 +25,7 @@ module.exports={
     "COMMON_ALERT":"Información",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Tiene una llamada en curso. ¿Está seguro de que desea cerrar sesión?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Tiene una llamada en curso. ¿Está seguro de salir?",
+    "COMMON_CHECK_QUIT_OFFLINE":"Tiene una llamada en curso. ¿Está seguro de salir?",
     "COMMON_EXIT_THE_PROMPT":"Llamada en curso. No puede desconectarse hasta que haya finalizado la llamada.",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"La función no está disponible.",
     "COMMON_LOGOUT":"Cerrar sesión",

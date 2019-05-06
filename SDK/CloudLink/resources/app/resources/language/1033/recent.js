@@ -11,7 +11,6 @@ module.exports={
     "MOBILE_MULTIDEVICE_PC_LOGINED":"CloudLink You have logged in to the PC client.",
     "MARK_AS_UNREAD":"Mark as Unread",
     "MARK_AS_READ":"Mark as Read",
-    "YOU_HAVE_DISSOLVED_OR_LEFT_THE_GROUP":"You have dismissed or quit the group.",
     "BUTTON_ADD":"Add",
     "CREATE_NEW_GROUP":"New Group",
     "RECENT_DELETE_CHECK_EDITOR":"The text box contains content. Are you sure you want to delete it?",

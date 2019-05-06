@@ -20,7 +20,7 @@ module.exports={
     "QUOTE":"Alıntı Yap",
     "RECEIVE_FAIL":"Alım başarısız.",
     "RESEND_END":"Yeniden gönder",
-    "SAVE_SUCCESS":"Başarıyla kaydedildi.",
+    "SAVE_SUCCESS":"Başarıyla kaydedildi!",
     "SCREEN_SHOT":"Ekran görüntüsü",
     "SEND":"Gönder",
     "SEND_FAIL":"Gönderilemedi.",
@@ -42,7 +42,8 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"{0} büyüklüğü {1} sınırını aşıyor.",
     "FILESEND_BAN_FILE_TYPE":"Bazı dosyalar gönderilemedi ve {0} türündeki dosyaların gönderilmesine izin verilmiyor.",
     "ALBUM":"galeri",
-    "BUSINESS_CARD":"Kartvizit"
+    "BUSINESS_CARD":"Kartvizit",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 
 
 

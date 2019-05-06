@@ -6,23 +6,23 @@ if (!Array.prototype.findIndex) {
     if (this === null) {
     throw new TypeError('"this" is null or not defined');
     }
-    
+
     var o = Object(this);
-    
+
     // 2. Let len be ? ToLength(? Get(O, "length")).
     var len = o.length >>> 0;
-    
+
     // 3. If IsCallable(predicate) is false, throw a TypeError exception.
     if (typeof predicate !== 'function') {
     throw new TypeError('predicate must be a function');
     }
-    
+
     // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
     var thisArg = arguments[1];
-    
+
     // 5. Let k be 0.
     var k = 0;
-    
+
     // 6. Repeat, while k < len
     while (k < len) {
     // a. Let Pk be ! ToString(k).
@@ -36,7 +36,7 @@ if (!Array.prototype.findIndex) {
     // e. Increase k by 1.
     k++;
     }
-    
+
     // 7. Return -1.
     return -1;
     }
@@ -296,7 +296,6 @@ function delegate(target, name) {
     doLogout: true, //登出-用于系统托盘
     // delegateTrackAppExit:  true, //打点app退出-用于系统托盘
     // offline: true, //切换离线-用于系统托盘
-    publishStatus: true, //设置用户状态-用于系统托盘
     collectLogs: true, //收集日志-用于系统托盘
     clearSelectedEditorToolBar: true, //清空编辑器状态-用于截图exe执行后回调
     mloginForceUpdate: true,//移动首页刷新
@@ -322,7 +321,8 @@ function delegate(target, name) {
     upgradeLoadingWindow: true,//安卓升级中提示信息
     onAgreePrivacy: true, // 隐私声明同意执行事件
     winHide: true, // 隐藏主窗口
-    winMinimize: true // 最小化主窗口
+    winMinimize: true, // 最小化主窗口
+    checkShowNewMessageNumber:true
   };
   if (name && limitMap[name]) {
     // Object.assign(delegate, { [name]: target });
@@ -342,35 +342,43 @@ function delegate(target, name) {
  */
 const isNullOrEmpty = function (dealObj) {
   var type = Object.type(dealObj);
-  if (type.includes("html") || type.includes("element")) {
-    return false;
-  }
-  if (
-    dealObj === undefined ||
-    dealObj === null ||
-    dealObj.toString() === "NaN" ||
-    dealObj === "" ||
-    dealObj.length === 0
-  ) {
-    return true;
-  } else {
-    if (Object.type(dealObj).includes("html")) {
+  if ( type === "object" ) {
+    for (var key in dealObj) {
       return false;
     }
-    if (Object.type(dealObj) === "object") {
-      for (var key in dealObj) {
+    return true;
+  } else {
+    if ( dealObj === undefined || dealObj === null || dealObj.toString() === "NaN" || dealObj === "" || dealObj.length === 0 ) {
+      return true;
+    } else {
+      if ( type.includes("html") || type.includes("element") ) {
         return false;
       }
-      return true;
     }
   }
   return false;
 };
+
+/**
+ * 混淆ip地址，只针对合法的ipv4地址
+ */
+const handleIp=function(ip) {
+  var mixedIp = "x";
+  if (ip) {
+    var ipSubList = ip.split(".");
+    //合法的ipv4地址，且不是ipv6地址
+    if (ipSubList.length === 4 && ip.indexOf(":") === -1) {
+      mixedIp = ipSubList[0] + ".x.x." +　ipSubList[3];
+    }
+  }
+  return mixedIp;
+}
+
 /**
  * 处理手机号码（暂时仅支持不带+86的国内手机）
  * 如要涉及到国际化，带上+号的正则请使用：^\+[1-9]{1}[0-9]{1,14}$
  * 如需适配未来更远一点的11位手机号码，可以考虑使用：/^1[0-9]{10}$/
- * @param {*} number 
+ * @param {*} number
  */
 const handlePhoneNumber=function(number){
   var numberStr = number?number.toString():"";
@@ -387,13 +395,13 @@ const handlePhoneNumber=function(number){
     return (numberStr.substr(0, tmpFirst) + '*****' + numberStr.substr(tmpFirst + 5));
   } else {
     return (regMobile.test(numberStr) ? (numberStr.substr(0, 3) + '****' + numberStr.substr(7)) : (numberStr.substr(0, tmpFirst) + '***' + numberStr.substr(tmpFirst + 3)));
-  }  
+  }
 }
 
 /**
  * 对于已经确定的误报打印对象，使用此方法脱敏，后续增加该方法
  * TODO 在debug版本中，运行期将误报对象存入文件中，运行期检查。发布版，
- * @param {*} obj 
+ * @param {*} obj
  */
 const desensitive = function(obj) {
   return obj;
@@ -436,7 +444,7 @@ const mergeByDay = function (time1, time2) {
 
 /**
  * 判断是否是上午还是下午
- * @param {*} time1 
+ * @param {*} time1
  */
 const morningOrNoon = function (time) {
   var date = new Date(time);
@@ -672,6 +680,7 @@ const getContactName = function (contact) {
     ? contact.native_name || contact.name || contact.account || contact.number || contact.mobile || ""
     : contact.name || contact.native_name || contact.account || contact.number || contact.mobile || "";
 };
+
 /**
  * 获取公司名称
  */
@@ -892,7 +901,28 @@ Array.prototype.getNumberKeySum = function (key) {
       if (Object.type(item[key]) === Object.type.NUMBER
         && !isNaN(item[key])
         && Infinity !== item[key]) {
-        sum += item[key];
+          sum += item[key];
+      }
+    }
+  });
+  return sum;
+};
+
+/**
+ * 获取未读数之和
+ * @param key
+ * @returns {number}
+ */
+Array.prototype.getUnreadNumberWithKey = function (key) {
+  var sum = 0;
+  this.forEach(function (item) {
+    if (Object.type(item) === Object.type.OBJECT) {
+      if (Object.type(item[key]) === Object.type.NUMBER
+        && !isNaN(item[key])
+        && Infinity !== item[key]) {
+        if (isNullOrEmpty(item.group) || item.group.msg_policy_type !== 0) {
+          sum += item[key];
+        }
       }
     }
   });
@@ -1336,7 +1366,7 @@ window.stroage = {
     if(window.localStorage){
        window.localStorage.setItem("isFastLogin", enable ? "true" : "false");
     }
-    
+
   }
 };
 
@@ -1403,12 +1433,12 @@ function WebSocketSenderAndLogger(data) {
   if(data.description === "tup_login_change_register_password"){  //修改密码判断（true 则打印日志的密码设置为*）
     data.param.change_pwd_param.old_password = "******";
     data.param.change_pwd_param.new_password = "******";
-  } 
+  }
   if(data.description === "tup_login_authorize"){ //登录鉴权判断（true 则打印日志的密码设置为*）
     data.param.authorize_param.auth_info.password = "******";
   }
   window.tupwsLogger && window.tupwsLogger.debug(data.description, data);
-  
+
   // if (data && data.description !== 'tup_http_upload_file') {
   //     window.tupwsLogger.debug("", data);
   // }
@@ -1435,7 +1465,7 @@ function reactStopPropagation(e) {
     if (e.stopPropagation) {
       e.stopPropagation();
     }
-  } else if (Object.type(e) === Object.type.OBJECT 
+  } else if (Object.type(e) === Object.type.OBJECT
   || Object.type(e) === Object.type.PROXYOBJECT) {
     // Object.type(e) === Object.type.PROXYOBJECT   兼容ios10，ios中获取到react的事件对象解析为proxyobject，而不是object
     if (e.stopPropagation) {
@@ -1566,8 +1596,8 @@ const setTitleLongNewLine = function (strSource, flg, sn) {
         var tmpStr = strSource.substring(i, i + sn);
         if (tmpStr.length < sn) {
           newStr += tmpStr;
-        } else { 
-          newStr += tmpStr + flg; 
+        } else {
+          newStr += tmpStr + flg;
         }
       }
       return newStr;

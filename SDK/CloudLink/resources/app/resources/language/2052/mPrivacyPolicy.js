@@ -15,8 +15,6 @@ module.exports = {
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_3": "3) 服务器会缓存临时群组或固定群组中传输的文件，超过一定时间或群组被解散后，服务器才会删除缓存的文件。",
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_4": "4) 富媒体消息及离线消息，会被缓存在服务器，超期记录会被删除。",
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_5": "5) 固定群组提供群文件功能，支持在群组中共享文件，这些文件将长期存储在服务器上，只有上传者手动删除或群组解散时，这些文件会被删除。",
-    "PRIVACY_POLICY_SECTION1_SUBCONTENT2_6": "6) 会议具有音视频能力，在使用此功能的过程中，本软件会使用设备本身或者外置的摄像头、麦克风以及扬声器。",
-    "PRIVACY_POLICY_SECTION1_SUBCONTENT2_7": "7) 桌面端会议具有材料共享功能，支持桌面共享，您在使用此功能过程中，基于您自己选择的情况下，会截屏获取对应的内容进行共享。",
     "PRIVACY_POLICY_SECTION1_SUBTITLE3": "1.3 日志信息",
     "PRIVACY_POLICY_SECTION1_SUBTITLE4": "1.4 音视频质量数据",
     "PRIVACY_POLICY_SECTION2_TITLE": "2  本应用如何使用这些信息",

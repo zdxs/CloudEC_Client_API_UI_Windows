@@ -161,6 +161,7 @@ module.exports={
     "NO_CONTACT_NUMBER":"Aucun numéro disponible.",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"Un appel est en cours. Voulez-vous vraiment vous déconnecter ?",
     "COMMON_CHECK_QUIT_CALLEXIST":"Un appel est en cours. Voulez-vous vraiment quitter ?",
+    "COMMON_CHECK_QUIT_OFFLINE":"tu es au téléphone.tu es sûr que tu veux aller hors ligne?",
     "REMOVE_GROUP_MEMBERS":"Retirer du groupe",
     "SET_TO_THE_GROUP_MANAGER":"Définir comme administrateur de groupe",
     "SEARCH":"Rechercher",

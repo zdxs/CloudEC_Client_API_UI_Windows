@@ -24,6 +24,7 @@ module.exports={
     "COMMON_ALERT":"ข้อมูล",
     "COMMON_CHECK_LOGOUT_CALLEXIST":"คุณมีสายที่กำลังสนทนาอยู่ คุณแน่ใจหรือว่าต้องการออกจากระบบ",
     "COMMON_CHECK_QUIT_CALLEXIST":"คุณมีสายที่กำลังสนทนาอยู่ แน่ใจหรือว่าคุณต้องการออก",
+    "COMMON_CHECK_QUIT_OFFLINE":"คุณมีสายที่กำลังสนทนาอยู่",
     "COMMON_EXIT_THE_PROMPT":"กำลังใช้สายอยู่ คุณสามารถออฟไลน์ได้หลังจากออกจากการโทรแล้วเท่านั้น",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":"ฟังก์ชันไม่สามารถใช้งานได้",
     "COMMON_LOGOUT":"ออกจากระบบ",

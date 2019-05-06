@@ -258,6 +258,7 @@ module.exports={
     "ENTER_CONF_TEMP_ACS_PWD_NULL":"Введите пароль временной конференции.",
     "ENTER_CONF_TOP_TITLE":"Подключиться к конференции",
     "ENTER_MY_MEET_ROOM":"Перейти в мой конференц-зал",
+    "PC_ONLINE_EXIST_CONFERNECE": "PC client is logged, please re-enter the meeting from PC.",
     "EXIT_CONFERENCE":"Пользователь покинул конференцию.",
     "FAILED_RELEASE_THE_CHAIR":"Сбой передачи прав председателя. Повторите попытку позже.",
     "FAILED_THEN_LOGIN":"Сбой аутентификации. Войдите повторно.",

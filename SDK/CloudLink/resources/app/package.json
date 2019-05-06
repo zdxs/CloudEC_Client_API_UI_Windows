@@ -47,7 +47,7 @@
     "iosopensdkdebugCI": "npm run buildMobileInfo && cd src && npm run iosopensdkdebug && cd .. && npm run copylibs",
     "iosopensdk": "npm run buildMobileInfo && cd src && npm run iosopensdk && cd .. && npm run copylibs",
     "androidopensdkdebugformac": "cd src && npm run androidopensdkdebug  && cd .. && npm run copylibsformac",
-    "androidopensdk":"cd src && npm run androidopensdk && cd .. ",
+    "androidopensdk":"cd src && npm run androidopensdk && cd ..  && npm run copylibsformac",
 
     "tools": "call tools",
     "bigwinwebpackage": "cd src && npm run bigwinbuild",
@@ -78,6 +78,8 @@
     "xmlreader": "^0.2.3"
   },
   "devDependencies": {
+    "babylon": "^6.18.0",
+    "node-xlsx": "^0.14.1",
     "@babel/generator": "^7.1.3",
     "babel-eslint": "^8.2.1",
     "babel-traverse": "^7.0.0-beta.3",

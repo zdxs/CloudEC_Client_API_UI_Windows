@@ -20,7 +20,7 @@ module.exports={
     "QUOTE":"อ้างอิง",
     "RECEIVE_FAIL":"การรับล้มเหลว",
     "RESEND_END":"ส่งใหม่",
-    "SAVE_SUCCESS":"บันทึกเรียบร้อยแล้ว",
+    "SAVE_SUCCESS":"บันทึกเรียบร้อยแล้ว!",
     "SCREEN_SHOT":"ภาพหน้าจอ",
     "SEND":"ส่ง",
     "SEND_FAIL":"การส่งล้มเหลว",
@@ -42,7 +42,8 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"ขนาด {0} เกินขีด จำกัด {1}",
     "FILESEND_BAN_FILE_TYPE":"บางไฟล์ล้มเหลวในการส่งและไฟล์ประเภท {0} ไม่ได้รับอนุญาตให้ส่ง",
     "ALBUM":"เฉลียง",
-    "BUSINESS_CARD":"นามบัตร"
+    "BUSINESS_CARD":"นามบัตร",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 
 
 

@@ -28,7 +28,6 @@ module.exports = {
     "DELETE_THIS_GROUP": "Delete Group",
     "DETAIL": "Details",
     "DISPLAY_MODE": "Display",
-    "EDITOR_PLACEHOLDER": "Enter the message.",
     "ENTER_NAME_OR_NUMBER_SEARCH": "Enter a name or account to search.",
     "EXIT_CURRENT_CALL": "Are you sure you want to quit the call?",
     "EXPAND_MORE": "More",
@@ -126,7 +125,6 @@ module.exports = {
     "CALL_PHONE_OFFICE4": "Office Phone 4",
     "CALL_OUT": "Call Out",
     "CHANGE_PASSWORD_TIPS_TWO": "The password must contain at least one uppercase letter, one lowercase letter, and one digit.(Cannot contain English double quotes)",
-    "SEARCH_NO_SEARCH_HISTORY": "No search record.",
     "CONFERENCE_PARTICIPANT": "Participants",
     "CONFERENCE_MORE": "More",
     "COMMON_EXIT_THE_PROMPT": "Call in progress. You can go offline only after you exit the call.",
@@ -154,6 +152,5 @@ module.exports = {
     "LOG_COMPRESS_PROMPT": "Collecting log",
     "EMPTY_MESSAGE": "No message",
     "UNDER_ATTACK": "The client is attacked. The message cannot be displayed properly.",
-    "MOBILE_NEWS": "Message",
     "INVALID_ENCRYPT_FILE_FOUND_CONTENT": "The file has been damaged or tampered with. Please reinstall the program."
 }

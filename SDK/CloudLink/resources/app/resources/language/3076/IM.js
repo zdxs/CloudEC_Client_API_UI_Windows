@@ -20,7 +20,7 @@ module.exports={
     "MORE": "更多",
     "RECEIVE_FAIL":"接收失敗",
     "RESEND_END":"重新發送",
-    "SAVE_SUCCESS":"儲存成功",
+    "SAVE_SUCCESS":"儲存成功！",
     "SCREEN_SHOT":"截圖",
     "SEND":"發送",
     "SEND_FAIL":"發送失敗",
@@ -42,7 +42,8 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"{0}大小超過{1}上限。",
     "FILESEND_BAN_FILE_TYPE":"部分文件發送失敗， 不允許發送 {0} 類型的文件。",
     "ALBUM":"相冊",
-    "BUSINESS_CARD":"名片"
+    "BUSINESS_CARD":"名片",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "文件{0}的文件名長度超過246字上限"
 
 
 

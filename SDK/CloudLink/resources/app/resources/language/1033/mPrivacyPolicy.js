@@ -15,8 +15,6 @@ module.exports = {
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_3": "3) Files transferred in a temporary or fixed group are cached on a server and will be deleted from the server when the specified duration expires or when the group is dismissed.",
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_4": "4) Rich media messages and offline messages are cached on a server and will be deleted when the specified duration expires.",
     "PRIVACY_POLICY_SECTION1_SUBCONTENT2_5": "5) The group file function is provided for sharing files in a contact group. These files are stored on a server. Users who upload these files need to manually delete them. Otherwise, these files are stored on the server permanently unless the group is dismissed.",
-    "PRIVACY_POLICY_SECTION1_SUBCONTENT2_6": "6) Huawei Meeting provides audio and video meeting capabilities. While you are using the meeting service, the application uses the device's own camera, microphone, and speaker or external ones.",
-    "PRIVACY_POLICY_SECTION1_SUBCONTENT2_7": "7) Huawei Meeting supports screen sharing for desktop meetings. It displays related information for all participants in a meeting to share based on your operation.",
     "PRIVACY_POLICY_SECTION1_SUBTITLE3": "1.3 Log Information",
     "PRIVACY_POLICY_SECTION1_SUBTITLE4": "1.4 Audio and Video Quality Data",
     "PRIVACY_POLICY_SECTION2_TITLE": "2  How the Application Uses Your Personal Data",

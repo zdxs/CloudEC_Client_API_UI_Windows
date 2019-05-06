@@ -24,6 +24,7 @@ module.exports={
     "COMMON_ALERT":" 注意",
     "COMMON_CHECK_LOGOUT_CALLEXIST":" 您現時正在進行通話，確定要登出嗎？",
     "COMMON_CHECK_QUIT_CALLEXIST":" 您現時正在進行通話，確定要退出嗎？",
+    "COMMON_CHECK_QUIT_OFFLINE":" 您現時正在進行通話，確定要离线嗎？",
     "COMMON_EXIT_THE_PROMPT":" 現時正在進行通話，退出後方可離線",
     "COMMON_FUNCTION_IS_NOT_AVAILABLE":" 功能不適用",
     "COMMON_LOGOUT":"登出",

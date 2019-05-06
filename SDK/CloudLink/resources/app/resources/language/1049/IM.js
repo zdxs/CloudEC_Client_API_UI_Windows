@@ -20,7 +20,7 @@ module.exports={
     "QUOTE":"Цитировать",
     "RECEIVE_FAIL":"Сбой приема.",
     "RESEND_END":"Отправить повторно",
-    "SAVE_SUCCESS":"Сохранено.",
+    "SAVE_SUCCESS":"Сохранено!",
     "SCREEN_SHOT":"Скриншот",
     "SEND":"Отправить",
     "SEND_FAIL":"Сбой отправки.",
@@ -42,5 +42,6 @@ module.exports={
     "FILESEND_BAN_FILE_SIZE":"Размер {0} превысил максимальный ({1}).",
     "FILESEND_BAN_FILE_TYPE":"Некоторые файлы не были отправлены. Типы файлов {0} недопустимы.",
     "ALBUM":"Альбом",
-    "BUSINESS_CARD":"Имя карты"
+    "BUSINESS_CARD":"Имя карты",
+    "FILE_SEND_BAN_FILENAME_LENGTH": "The file name of file {0} is longer than the 246-word limit."
 }
