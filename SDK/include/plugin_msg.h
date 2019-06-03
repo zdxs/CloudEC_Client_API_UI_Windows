@@ -66,6 +66,7 @@ struct plugin_init_param
 
 	char* path;                       /// 运行客户端目录的路径
 	plugin_notify_func notifyFunc;    /// 通知函数
+	char* config;                     /// 定制化配置
 };
 
 /**!

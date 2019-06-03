@@ -139,7 +139,7 @@ var CLIENTCONFIG = {
 
 
 
-  DEFAULT_MENU: "recent",
+  DEFAULT_MENU: "nav",
 
   MENU_LIST:["recent","contactGroups","conference","call","work","webCollection"],
   MOBILE_DEFAULT_MENU: "recent",
@@ -179,7 +179,7 @@ var CLIENTCONFIG = {
       1:'rgb(193, 183, 246)'
     },
     AVATAR_SIZE:60,
-    FILE_TYPE:'.bmp'
+    FILE_TYPE:'.jpg'
   },
   DEFAULT_LANGUAGE: "2052",
 
@@ -232,9 +232,9 @@ var CLIENTCONFIG = {
   ACS_MANUFACTUREROUI_TYPE: 'string',
 
   ACS_SOFTWAREVERSION_NAME: 'Device.DeviceInfo.SoftwareVersion',
-  ACS_SOFTWAREVERSION_VALUE: '6.1.154',
-  ACS_SOFTWAREVERSION_CODE_ANDROID: '154',
-  ACS_SOFTWAREVERSION_CODE_IOS: '154',
+  ACS_SOFTWAREVERSION_VALUE: '6.1.174',
+  ACS_SOFTWAREVERSION_CODE_ANDROID: '174',
+  ACS_SOFTWAREVERSION_CODE_IOS: '174',
 
   ACS_SOFTWAREVERSION_TYPE: 'string',
 
@@ -299,7 +299,6 @@ var CLIENTCONFIG = {
 
   "Device.ComCfg.IM.LimitText":"3000",
   "Device.ComCfg.IM.limitpic":"10240",
-  "Device.ComCfg.IM.limitscreenshot":"1000",
  
   "Device.ComCfg.IM.forbidFileExt":"bat;c;js",
   "Device.ComCfg.IM.perFragmentsize":"5",
@@ -368,7 +367,7 @@ var CLIENTCONFIG = {
   BURIED_POST_ADDR: "",//"http://app.huawei.com/hwa-c/open/dc", // 生产 : "http://app.huawei.com/hwa-c/open/dc"  测试："http://nkweb-sit.huawei.com/hwa-c/open/dc"
   NEW_APP_NAME: "Huawei Meeting",//Workplace或者Huawei Meeting
   NEW_APP_CHINEASE_NAME: "华为会议",
-  USER_LOG_MAX_FILES: 3,
+  USER_LOG_MAX_FILES: 2,
   "Device.ComCfg.Conf.IsAllowRecord": "1" ,
   "Device.ComCfg.Conf.IsIdoBfcpRetransmission": "1", //ido重传开关，默认关闭
   ENABLE_HISTORY_CONF_LIST: 'Device.ComCfg.Conf.Svc.IsEnableHistoryConfList' //`会议历史记录,默认不启用

@@ -100,7 +100,7 @@ const isObjectValueEqual = function (a, b) {
   }
   return true;
 
-}
+};
 
 /**
  * js判断对象是否相等 只判断名字和number
@@ -118,7 +118,7 @@ const isOnLineAttendancesValueEqual = function (attendances1, attendances2) {
   }
   return true;
 
-}
+};
 
 
 /**
@@ -138,7 +138,7 @@ const isObjectArrayValueEqual = function (objectArray1, objectArray2) {
   }
   return true;
 
-}
+};
 
 
 /**
@@ -165,7 +165,7 @@ const sortPreAndOrigiArray =function (preArray,origiArray) {
   }
   return temp.concat(origiArray);
 
-}
+};
 
 /**
  * 字符串分隔成字符
@@ -207,7 +207,7 @@ const explode = function (inputstring, separators, includeEmpties) {
     fixedExplode[count] = currentElement;
   }
   return fixedExplode;
-}
+};
 
 /**
  * 特殊Promise对象
@@ -296,7 +296,6 @@ function delegate(target, name) {
     doLogout: true, //登出-用于系统托盘
     // delegateTrackAppExit:  true, //打点app退出-用于系统托盘
     // offline: true, //切换离线-用于系统托盘
-    collectLogs: true, //收集日志-用于系统托盘
     clearSelectedEditorToolBar: true, //清空编辑器状态-用于截图exe执行后回调
     mloginForceUpdate: true,//移动首页刷新
     updateLanguage: true,//切换语言后刷新界面
@@ -372,7 +371,7 @@ const handleIp=function(ip) {
     }
   }
   return mixedIp;
-}
+};
 
 /**
  * 处理手机号码（暂时仅支持不带+86的国内手机）
@@ -396,7 +395,43 @@ const handlePhoneNumber=function(number){
   } else {
     return (regMobile.test(numberStr) ? (numberStr.substr(0, 3) + '****' + numberStr.substr(7)) : (numberStr.substr(0, tmpFirst) + '***' + numberStr.substr(tmpFirst + 3)));
   }
-}
+};
+
+/**
+ * 处理账号打印
+ * 账号去掉后面@的域名后，小于3个字母，则全打印；3个字母以上，*隐去账号中间的一半；如果是手机号码，则用手机号码星化规则
+ */
+const handleAccountPrint=function(account){
+  if(isNullOrEmpty(account)){
+    return "";
+  }
+
+  //去掉@后面的域名
+  var acc = account;
+  var accDomain = "";
+  var indexOfAt = account.lastIndexOf('@');
+  if(indexOfAt !== -1){
+    acc = account.substr(0, indexOfAt);
+    accDomain = account.substr(indexOfAt);
+  }
+
+  //检查账号是否是手机号码,手机号码则按照手机号码的规则来
+  var regMobile =  new RegExp("^1[3|4|5|6|7|8|9][0-9]{9}$"); //验证规则,修改适配新增号段166，189，199
+  if(regMobile.test(acc)){
+    return (handlePhoneNumber(acc) + accDomain);
+  }
+
+  //小于3个字母，则全打印；3个字母以上，*隐去账号中间的一半
+  if(acc.length < 3){
+    return (acc + accDomain);
+  }else{
+    var hideLength = parseInt(acc.length/2);
+    var showLengthFront = parseInt((acc.length - hideLength)/2);
+    var showLengthEnd = acc.length - hideLength - showLengthFront;
+    var starStr = new Array(acc.length - showLengthFront - showLengthEnd + 1).join("*");
+    return (acc.substr(0, showLengthFront) + starStr + acc.substr(acc.length-showLengthEnd) + accDomain);
+  }
+};
 
 /**
  * 对于已经确定的误报打印对象，使用此方法脱敏，后续增加该方法
@@ -405,7 +440,7 @@ const handlePhoneNumber=function(number){
  */
 const desensitive = function(obj) {
   return obj;
-}
+};
 
 /**
  *处理显示时间
@@ -417,10 +452,10 @@ const dealMessageTime = function (time) {
   var formatDateTime = formatDateMMDDHHMM(time, "/");
   var day = formatDateTime.date;
   if (mergeByDay(time, currentTime)) {
-    day = window.language.IM_DIALOG_TODAY;
+    day = window.language.TODAY;
   }
   if (mergeByDay(time, currentTime - 86400000)) {
-    day = window.language.IM_DIALOG_YESTERDAY;
+    day = window.language.YESTERDAY;
   }
   var timePeriod = morningOrNoon(time);
   return { day: day, time: formatDateTime.time, timePeriod: timePeriod };
@@ -512,14 +547,31 @@ const formatNum = function (num, pow) {
 };
 
 /**
+ * 删除列表中的空数据
+ * @param list
+ * @returns {*}
+ */
+const delNullItem = function (list) {
+  var result = [];
+  for (var i=0; i<list.length; i++) {
+    if (list[i] !== ""){
+      result.push(list[i]);
+    }
+  }
+  return result;
+};
+
+/**
  * 获取文件名
  * @param path
  * @returns {*}
  */
 const getFileName = function (path) {
-  return path.split("/")[path.split("/").length - 1].split("\\")[
-    path.split("/")[path.split("/").length - 1].split("\\").length - 1
-  ];
+  var list = path.split("/");
+  list = delNullItem(list);
+  list = list[list.length - 1].split("\\");
+  list = delNullItem(list);
+  return list[list.length - 1];
 };
 // 定义新的类型Guid
 const Guid = function () {
@@ -737,9 +789,9 @@ const getClientId = (function () {
 
 //闭包sno的值
 const Sno = (function () {
-  var sno = -1;
+  var sno = 0;
   return function () {
-    return sno >= 65535 ? sno = 0 : ++sno;
+    return sno >= 65535 ? sno = 1 : ++sno;
   };
 })();
 /**
@@ -1411,7 +1463,7 @@ const getDifferenceCharsCount = function (strSource, strNew) {
     differenceCharsCount++;
   }
   return differenceCharsCount;
-}
+};
 
 // 集中处理WebSocket日志字符串打印
 function WebSocketSenderAndLogger(data) {
@@ -1449,7 +1501,7 @@ WebSocket.prototype.sendToTup = WebSocketSenderAndLogger;
 /**
  * websocket实例回收&状态初始化
  */
-window.webSocketInitCollect = {}
+window.webSocketInitCollect = {};
 function addToInitCollect(key, fn, ws) {
   var logger = window.Logger('util')('addToInitCollect');
   logger.info('[addToInitCollect] key: ' + key + ' ws: ' + ws);
@@ -1558,7 +1610,7 @@ function getDefaultTimeZone (list) {
   var defaul_tTime_zond = -(new Date().getTimezoneOffset()) / 60;
   var timeZoneNumber=list.indexOf(defaul_tTime_zond)+1;
   return timeZoneNumber;
-};
+}
 
 /**
  * 实现复制到粘贴板
@@ -1572,10 +1624,10 @@ function copyToClipboard (str) {
     var clipboardData = e.clipboardData || window.clipboardData;
     clipboardData.setData('text', str);
     e.preventDefault();
-  }
+  };
   document.addEventListener("copy", copyFun);
   var copyResult = document.execCommand("copy");
-  document.removeEventListener("copy", copyFun)
+  document.removeEventListener("copy", copyFun);
   return copyResult;
 }
 
@@ -1604,7 +1656,7 @@ const setTitleLongNewLine = function (strSource, flg, sn) {
     }
   }
   return strSource;
-}
+};
 
 // 判断是否是ipad
 const isIPad = new RegExp("\\biPad\\b", "i").test(window.navigator.userAgent);

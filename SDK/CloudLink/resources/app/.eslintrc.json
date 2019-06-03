@@ -68,6 +68,7 @@
     "constant":true,
     "coreContact":true,
     "coreGroup":true,
+    "coreCommonComponent": true,
     "CheckCompUpdate":true,
     "ipcConstant": true,
     "coreIpcChildProcess": true,
@@ -75,7 +76,9 @@
     "coreUt": true,
     "corePlugin": true,
     "requestAnimFrame": true,
-    "Media": true
+    "HwLazyUiPage": true,
+    "Media": true,
+    "coreLog": true
   },
   "plugins": [
     "react"

@@ -1,4 +1,3 @@
-module.exports={
-    "TARGET_TO_CONTEXT":"View Context",
-    "HISTORY":"History"
+module.exports = {
+    "HISTORY": "History"
 }

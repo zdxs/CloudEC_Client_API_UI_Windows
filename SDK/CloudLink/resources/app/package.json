@@ -46,8 +46,10 @@
 
     "iosopensdkdebugCI": "npm run buildMobileInfo && cd src && npm run iosopensdkdebug && cd .. && npm run copylibs",
     "iosopensdk": "npm run buildMobileInfo && cd src && npm run iosopensdk && cd .. && npm run copylibs",
+    "iosopensdkformac": "npm run buildMobileInfo && cd src && npm run iosopensdk && cd .. && npm run copylibsformac",
     "androidopensdkdebugformac": "cd src && npm run androidopensdkdebug  && cd .. && npm run copylibsformac",
-    "androidopensdk":"cd src && npm run androidopensdk && cd ..  && npm run copylibsformac",
+    "androidopensdkreleaseformac":"cd src && npm run androidopensdk && cd ..  && npm run copylibsformac",
+    "androidopensdkrelease":"cd src && npm run androidopensdk && cd ..  && npm run copylibs",
 
     "tools": "call tools",
     "bigwinwebpackage": "cd src && npm run bigwinbuild",
