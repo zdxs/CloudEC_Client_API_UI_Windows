@@ -1,0 +1,24 @@
+.pc-audio-set {
+  box-sizing: border-box;
+  padding: 9px;
+}
+.pc-audio-set .pc-menu-item-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.pc-audio-set .pc-audio-content .pc-audio-tit {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+.pc-audio-set .pc-audio-set-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.ipc-audio-child-header {
+  -webkit-app-region: drag;
+}
+
+/*# sourceMappingURL=audio-setting.css.map*/
