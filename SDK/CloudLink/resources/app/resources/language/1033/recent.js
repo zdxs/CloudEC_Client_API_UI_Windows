@@ -1,5 +1,4 @@
 module.exports = {
-    "CALLRECORD_CALLING": "Call",
     "CONVERSATION": "Messages",
     "RECENT_CONTACTS": "Recent contacts",
     "NOTIFICATION_BAR_UNREAD": "[{0} unread]",

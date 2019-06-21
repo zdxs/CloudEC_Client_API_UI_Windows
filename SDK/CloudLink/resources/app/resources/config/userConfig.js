@@ -232,9 +232,9 @@ var CLIENTCONFIG = {
   ACS_MANUFACTUREROUI_TYPE: 'string',
 
   ACS_SOFTWAREVERSION_NAME: 'Device.DeviceInfo.SoftwareVersion',
-  ACS_SOFTWAREVERSION_VALUE: '6.1.178',
-  ACS_SOFTWAREVERSION_CODE_ANDROID: '178',
-  ACS_SOFTWAREVERSION_CODE_IOS: '178',
+  ACS_SOFTWAREVERSION_VALUE: '6.1.181',
+  ACS_SOFTWAREVERSION_CODE_ANDROID: '181',
+  ACS_SOFTWAREVERSION_CODE_IOS: '181',
 
   ACS_SOFTWAREVERSION_TYPE: 'string',
 
@@ -360,7 +360,7 @@ var CLIENTCONFIG = {
   SVC_WATCH_BITES_BY_CPUS:0, //根据CPU核数执行选看策略。0：CPU数和esight执行取小操作；1：以CPU为准；2：以esight配置为准
   
   
-  TEMP_MEDIAX_ADDRESS: "bmeeting.huaweicloud.com",
+  TEMP_MEDIAX_ADDRESS: "meeting.huaweicloud.com",
   TEMP_MEDIAX_PORT: "443",
 
 
@@ -370,5 +370,7 @@ var CLIENTCONFIG = {
   USER_LOG_MAX_FILES: 2,
   "Device.ComCfg.Conf.IsAllowRecord": "1" ,
   "Device.ComCfg.Conf.IsIdoBfcpRetransmission": "1", //ido重传开关，默认关闭
-  ENABLE_HISTORY_CONF_LIST: 'Device.ComCfg.Conf.Svc.IsEnableHistoryConfList' //`会议历史记录,默认不启用
+  ENABLE_HISTORY_CONF_LIST: 'Device.ComCfg.Conf.Svc.IsEnableHistoryConfList', //`会议历史记录,默认不启用
+
+  NEW_FUNCTION_RECOMMENDATION: true, //新功能推荐，默认开启
 };

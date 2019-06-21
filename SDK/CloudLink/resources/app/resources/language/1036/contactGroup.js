@@ -103,7 +103,6 @@ module.exports = {
     "COMMON_RELEASE": "Publier",
     "ACCOUNT": "Compte",
     "ADDED_MEMBER": "Les membres suivants sont ajoutés au groupe : ",
-    "DISMISS_GROUP": "Supprimer le groupe",
     "EMAIL": "E-mail",
     "EXIT_GROUP": "Quitter le groupe",
     "EXITS_GROUP": "Quittez le groupe.",
@@ -120,6 +119,5 @@ module.exports = {
     "DELETE_MEMBERS": "Supprimer un membre",
     "DELETE_EXIT_GROUP": "Supprimer et quitter le groupe",
     "HOME": "Domicile",
-    "IM_Dialog": "Discussion",
     "MOBIL_WORK_TABLE": "Travail"
 }

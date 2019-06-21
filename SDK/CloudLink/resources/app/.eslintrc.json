@@ -36,7 +36,6 @@
     "LOG_LEVEL": true,
     "LOG_LEVEL_TYPES": true,
     "LOG_FILE_MAX_SIZE": true,
-    "LOG_MAX_FILES": true,
     "APP_DATA_PATH": true,
     "USER_DATA_PATH": true,
     "LOG_PATH": true,
@@ -51,6 +50,8 @@
     "getContactName": true,
     "getContactDept": true,
     "getContactNameByMessage": true,
+    "getPublicNoName":true,
+    "reactStopPropagation": true,
     "coreAccount":true,
     "coreCommon":true,
     "coreIm":true,
@@ -77,8 +78,10 @@
     "corePlugin": true,
     "requestAnimFrame": true,
     "HwLazyUiPage": true,
+    "coreLazyMobileUiPage": true,
     "Media": true,
-    "coreLog": true
+    "coreLog": true,
+    "coreLogger": true
   },
   "plugins": [
     "react"

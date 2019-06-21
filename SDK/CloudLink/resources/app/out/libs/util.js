@@ -312,7 +312,6 @@ function delegate(target, name) {
     showPersonalManage: true,//显示个人管理平台
     resumeShow: true,//视频右下角弹窗模式恢复成主界面模式的实现
     searchForceUpdate: true,//搜索界面强制刷新，适用于添加了联系人之后的处理
-    CheckOffLineIsInCall: true,//点击离线前判断是否在通话中
     countdownConfirmWindow: true, //带有倒计时的confirm提示框
     showCopyright: true,//显示PC版权说明
     editorContentChange:true,//编辑器内容变化方法
@@ -349,10 +348,6 @@ const isNullOrEmpty = function (dealObj) {
   } else {
     if ( dealObj === undefined || dealObj === null || dealObj.toString() === "NaN" || dealObj === "" || dealObj.length === 0 ) {
       return true;
-    } else {
-      if ( type.includes("html") || type.includes("element") ) {
-        return false;
-      }
     }
   }
   return false;
@@ -468,8 +463,8 @@ const dealMessageTime = function (time) {
  * @returns {boolean}
  */
 const mergeByDay = function (time1, time2) {
-  var date1 = new Date(time1);
-  var date2 = new Date(time2);
+  var date1 = new Date(parseInt(time1));
+  var date2 = new Date(parseInt(time2));
   return !(
     date1.getFullYear() !== date2.getFullYear() ||
     date1.getMonth() !== date2.getMonth() ||
@@ -732,7 +727,18 @@ const getContactName = function (contact) {
     ? contact.native_name || contact.name || contact.account || contact.number || contact.mobile || ""
     : contact.name || contact.native_name || contact.account || contact.number || contact.mobile || "";
 };
-
+/**
+ * 获取公众号名称
+ * @param {*} publicNoInfo
+ */
+const getPublicNoName = function (publicNoInfo) {
+  if (isNullOrEmpty(publicNoInfo)) {
+    return '';
+  }
+  return window.langcode === "2052"
+    ? publicNoInfo.nodeName || publicNoInfo.nodeNameEn || ""
+    : publicNoInfo.nodeNameEn || publicNoInfo.nodeName || "";
+};
 /**
  * 获取公司名称
  */
@@ -1286,7 +1292,7 @@ Object.isEqual = function (obj1, obj2) {
             case Object.type.OBJECT:
               flag = isEqu(obj1[key], obj2[key]);
               break;
-            case obj1[key].type.ARRAY:
+            case Object.type.ARRAY:
               flag = obj1[key].isEqual(obj2[key]);
               break;
             case Object.type.NULL:
@@ -1503,7 +1509,7 @@ WebSocket.prototype.sendToTup = WebSocketSenderAndLogger;
  */
 window.webSocketInitCollect = {};
 function addToInitCollect(key, fn, ws) {
-  var logger = window.Logger('util')('addToInitCollect');
+  var logger = coreLogger.getLogger('util')('addToInitCollect');
   logger.info('[addToInitCollect] key: ' + key + ' ws: ' + ws);
   window.webSocketInitCollect[key] = fn;
 }
@@ -1538,7 +1544,7 @@ function reactStopPropagation(e) {
  * 展示处理时间
  */
 function showDealTime(info) {
-  var logger=window.Logger('test')('showDealTime');
+  var logger=coreLogger.getLogger('test')('showDealTime');
   logger.debug(new Date().format('yyyy-MM-dd hh:mm:ss.S'),info);
 }
 /**
@@ -1676,3 +1682,96 @@ window.requestAnimFrame = (function(){
       window.setTimeout(callback, 1000 / 60);
     };
 })();
+
+// 根据文件名获取文件类型
+function getFileType(filename) {
+  var mime_types = {
+    doc: "do[ct][xm]?|wps|wpt|rtf|wtf",
+    ppt: "pp[tsa][xm]?|thmx",
+    exe: "exe|scr",
+    help: "hl.?|chm",
+    html: "html?|hta|xhtml",
+    picture:
+      "png|jpe?g|jpe|gif|bmp|rle|dib|eps|pcx|pct|pict|pxr|sct|tga|vda|tcb|vst|tiff?|p[bgpnfa]m|psb",
+    psd: "eps|psd|pdd",
+    rar: "rar|zip|cab|arj|lzh|ace|7-zip|tar|gzip|uue|bz2|jar|iso|isz|z|7z",
+    xls: "xl[sta][xmb]?|csv",
+    audio:
+      "mp[32c]|m[412p]a|wma|rmi|wav|cda|ra|midi?|ogg|ape|flac|aac|mka|ac3|dts|au|snd|aif[cf]?",
+    video:
+      "avi|wm[axpv]?|r[mtp]|r[ap]m|roq|rmvb|swf|mp4|qt|3gp?[p2]|pls|vob|m3u|dvd|ogm|amr|mpeg?|mpg|fl[ivc]|m[ko]v|as[fx]|flic|ivf|m[124]v|m4[pb]|mp2v|mpv2|mpcpl|dat|ts|tp|tpr|ds[mvas]|drc|ifo|d2v|pva|pss|ratdvd|sm[ik]?|bik|smil|w[va]x"
+  };
+  var mime_keys = Object.keys(mime_types);
+  //非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后使用。这在使用或字符“(|)”来组合一个模式的各个部分时很有用。例如“industr(?:y|ies)”就是一个比“industry|industries”更简略的表达式。
+  var mime_map = new RegExp(
+    "^(?:" + mime_keys.map(function (k){return "("+mime_types[k]+")"}).join("|") + ")$",
+    "i"
+  );
+
+  var extend = filename
+    .replace(/^[\s\S]*\.([^.]*)$/, "$1")
+    .replace("<b>", "")
+    .replace("</b>", "");
+  var match = mime_map.exec(extend);
+  if (!match) {
+    return "unknown";
+  }
+  return (
+    (match &&
+      match
+        .slice(1)
+        .map(function(a, x){return a && mime_keys[x]})
+        .join("")) ||
+    extend
+  );
+}
+
+function isIPv4(str) {
+  var ipv4_reg = /(?=(\b|\D))(((\d{1,2})|(1\d{1,2})|(2[0-4]\d)|(25[0-5]))\.){3}((\d{1,2})|(1\d{1,2})|(2[0-4]\d)|(25[0-5]))(?=(\b|\D))/;
+  return ipv4_reg.test(str);
+}
+
+function isIPv6(str) {
+  if (/::/.test(str)) {
+    var arr = str.split(/::/);
+    if (arr.length !== 2) return false;
+    if (arr[0].split(":").length + arr[0].split(":").length > 7) return false;
+    var reg = /^(([0-9a-f]{1,4}:){0,7}[0-9a-f]{1,4}(\/\d{1,3})?|)$/i;
+    return reg.test(arr[0]) && reg.test(arr[1]);
+  } else {
+    return /^([0-9a-f]{1,4}:){7}[0-9a-f]{1,4}(\/\d{1,3})?$/i.test(str);
+  }
+}
+
+function isPhone(str) {
+  var number_reg = /^([+*#]\d+|\d{3,})$/;
+  return number_reg.test(str);
+}
+function dataURLtoBlob(dataurl) {
+  var arr = dataurl.split(","),
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n);
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n);
+  }
+  return new Blob([u8arr], {type: mime});
+}
+function formatDate(date) {
+  var d = new Date(date);
+  if (!d) return;
+  var year = d.getFullYear();
+  var month = d.getMonth();
+  var getDate = d.getDate();
+  var today = new Date();
+  if (year === today.getFullYear()) {
+    if (month === today.getMonth() && getDate === today.getDate()) {
+      return d.format("hh:mm");
+    } else {
+      return d.format("MM-dd hh:mm");
+    }
+  } else {
+    return d.format("yyyy-MM-dd hh:mm");
+  }
+}

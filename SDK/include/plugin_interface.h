@@ -100,6 +100,19 @@ CLKSDK_API int clm_joinMeetingById(plugin_join_meeting_by_id_param *data);
 */
 CLKSDK_API int clm_createMeetingWithParticipants(plugin_create_meeting_with_participants_param *data);
 
+/**!
+* \brief
+*   sso登录
+*   本接口属于异步接口
+*
+* @param
+*	data 见结构体定义
+*
+* @return
+*   成功返回0，否则失败
+*/
+CLKSDK_API int clm_SSOLogin(plugin_sso_login_param *data);
+
 #ifdef __cplusplus
 }
 #endif

@@ -9,7 +9,6 @@ module.exports = {
     "SETTINGS": "Paramètres",
     "SYSTEM_SETTING_BASICS": "Essentiels",
     "SYSTEM_SETTING_CALL": "Appel",
-    "COMMON_SAVE": "Enregistrer",
     "MEDIA_SETTING_AUDIO_INPUT": "Entrée audio",
     "MEDIA_SETTING_AUTO_ADJUST": "Réglage automatique du volume du micro",
     "MEDIA_SETTING_AUDIO_OUTPUT": "Sortie audio",

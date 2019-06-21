@@ -26,7 +26,6 @@ module.exports = {
     "WITHDRAW_OPRMSG_TIMEOUT": "Le message a été envoyé il y a plus de 2 minutes et ne peut pas être rappelé.",
     "WITHDRAW_NOTIFY": "{0} a rappelé un message.",
     "ALL_FILESEND_BAN_FILE_TYPE": "Échec de l'envoi du fichier. Le type de fichier {0} n'est pas pris en charge.",
-    "INITIATE_MESSAGE": "Envoyer un message",
     "NO_MESSAGE": "Vous n'avez aucun message.",
     "CREATE_NEW_CHAT": "Créer une nouvelle discussion",
     "WITHDRAW_SUCCESS": "Rappel du message réussi.",

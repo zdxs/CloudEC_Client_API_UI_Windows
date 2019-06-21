@@ -4,7 +4,6 @@ module.exports = {
     "SEARCH_CONTACTS": "Contacts",
     "FILE_NO_EXIST": "The file does not exist.",
     "SEARCH_FILE": "Files",
-    "MOBIL_CONTACT": "Contacts",
     "SEARCH_YOU_CAN_SEARCH": "You can search for ",
     "SEARCH_NO_RESULT": "Search has no results",
     "IN_SEARCHING": "Searching...",

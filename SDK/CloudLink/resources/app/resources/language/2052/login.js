@@ -21,7 +21,6 @@ module.exports = {
     "SKIP_LOGIN": "跳过登录",
     "MOBILE_LOGIN_SETTINGS": "登录设置",
     "MOBILE_SERVICE_SETTING": "服务器设置",
-    "MOBILE_SAVE": "保存",
     "PRE_LOGOUT_CHECK_EDITOR": "您有正在进行的对话，确定要退出登录吗？",
     "PRE_LOGOUT_CHECK_FILE_TRANSFER": "正在传输文件，是否确定退出登录？",
     "PRE_EXIT_CHECK_EDITOR": "您有正在进行的对话，确定退出程序吗？",
@@ -157,7 +156,6 @@ module.exports = {
     "AUTHENTICATION": "身份验证",
     "GET_VERIFICATION_CODE": "获取验证码",
     "GO_PROXY_SETTING_PAGE": "跳转到代理设置",
-    "PC_PHONE_OR_ACCOUNT": "手机号或帐号",
     "SET_NEW_PASSWORD": "设置新密码",
     "VERIFICATION_CODE": "验证码",
     "PLEASE_INPUT_VERIFICATION_CODE": "请输入验证码",
@@ -190,6 +188,5 @@ module.exports = {
     "SERVER_ADDRESS_ERROR": "服务器地址格式错误",
     "LOGIN_SERVER_ADDRESS": "服务器地址，多IP以逗号隔开",
     "LOGIN_ACCOUNT_TIP": "帐号/手机号(中国)",
-    "FORGET_PWD_ACCOUNT_TIP": "请输入帐号或手机号(中国)",
     "LOGIN_COMPANY_TIP": "企业名称"
 }

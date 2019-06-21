@@ -64,7 +64,8 @@ struct plugin_init_param
 {
 	plugin_call_back callbackFunc;    /// 异步调用回调函数
 
-	char* path;                       /// 运行客户端目录的路径
+	char* path;                       /// CloudLink文件夹路径
+	char* appId;                      /// 应用ID
 	plugin_notify_func notifyFunc;    /// 通知函数
 	char* config;                     /// 定制化配置
 };
@@ -149,6 +150,20 @@ struct plugin_create_meeting_with_participants_param
 	UINT32 meetingType;                         /// 会议类型
 	UINT32 needPassword;                        /// 会议是否需要密码
 	meeting_participants_param memberInfo;      /// 会议成员信息
+};
+
+/**!
+* \brief
+*   sso登录接口参数结构体
+*/
+struct plugin_sso_login_param
+{
+	plugin_call_back callbackFunc;    /// 异步调用回调函数
+
+	UINT32 serverPort;     /// 登录服务器端口
+	char* serverAddress;   /// 登录服务器地址
+	char* domain;          /// 登录域名
+	char* code;          /// 登录凭证
 };
 
 #endif /* _PLUGIN_MSG_H_ */

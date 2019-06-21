@@ -1,5 +1,4 @@
 module.exports = {
-    "CALLRECORD_CALLING": "发起呼叫",
     "CONVERSATION": "消息",
     "RECENT_CONTACTS": "最近联系人",
     "NOTIFICATION_BAR_UNREAD": "[{0}条]",

@@ -12,7 +12,6 @@ module.exports = {
     "SYSTEM_SETTING_CALL": "Call",
     "SYSTEM_SETTING_FILE": "File",
     "SYSTEM_SETTING_MESSAGES": "Message",
-    "COMMON_SAVE": "Save",
     "MEDIA_SETTING_AUDIO_INPUT": "Audio Input",
     "MEDIA_SETTING_AUTO_ADJUST": "Auto-adjust the mic volume",
     "MEDIA_SETTING_AUDIO_OUTPUT": "Audio Output",

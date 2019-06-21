@@ -12,7 +12,6 @@ module.exports = {
     "SYSTEM_SETTING_CALL": "呼叫",
     "SYSTEM_SETTING_FILE": "文件管理",
     "SYSTEM_SETTING_MESSAGES": "消息通知",
-    "COMMON_SAVE": "保存",
     "MEDIA_SETTING_AUDIO_INPUT": "音频输入设备",
     "MEDIA_SETTING_AUTO_ADJUST": "自动调节麦克风音量",
     "MEDIA_SETTING_AUDIO_OUTPUT": "音频输出设备",

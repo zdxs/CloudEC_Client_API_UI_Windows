@@ -4,7 +4,6 @@ module.exports = {
     "SEARCH_CONTACTS": "联系人",
     "FILE_NO_EXIST": "文件不存在",
     "SEARCH_FILE": "文件",
-    "MOBIL_CONTACT": "联系人",
     "SEARCH_YOU_CAN_SEARCH": "您可以搜索",
     "SEARCH_NO_RESULT": "搜索无结果",
     "IN_SEARCHING": "搜索中...",

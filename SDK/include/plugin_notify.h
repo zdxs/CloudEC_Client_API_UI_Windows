@@ -18,6 +18,11 @@
 #define PLUGIN_NOTIFY_USER_WAS_KICKED_OUT           2202
 #define PLUGIN_NOTIFY_DATA_SHARING_STATE_CHANGED    2203
 #define PLUGIN_NOTIFY_DATA_SHARING_PERSON_CHANGED   2204
+#define PLUGIN_NOTIFY_CONF_INFO                     2205
+#define PLUGIN_NOTIFY_CONF_LIFECYCLE                2206
+#define PLUGIN_NOTIFY_GET_REMOTE_CONTROL_PRIVLEGE   2207
+#define PLUGIN_NOTIFY_DEL_REMOTE_CONTROL_PRIVLEGE   2208
+#define PLUGIN_NOTIFY_DATA_SHARING_HWND_INFO        2209
 
 #define PLUGIN_NOTIFY_MSG_2299                      2299
 
@@ -52,6 +57,54 @@ struct plugin_notify_data_sharing_state_changed
 struct plugin_notify_data_sharing_person_changed
 {
     char sharerName[MAX_NOTIFY_STR_LENGTH];     /// 当前分享者
+    char shareAccount[MAX_NOTIFY_STR_LENGTH];   /// 当前分享帐号
+};
+
+/**!
+* \brief
+*   会议信息的通知结构体
+*/
+struct plugin_notify_conf_info
+{
+    char confUrl[MAX_NOTIFY_STR_LENGTH];     /// 当前会议链接
+};
+
+/**!
+* \brief
+*   会议生命周期的通知结构体
+*/
+struct plugin_notify_conf_lifecycle
+{
+    UINT32 state;                            ///会议开始 0 或 会议结束 1
+};
+
+/**!
+* \brief
+*   取得共享控制的通知结构体
+*/
+struct plugin_notify_get_remote_control_privlege
+{
+    char userName[MAX_NOTIFY_STR_LENGTH];     /// 当前屏幕控制者姓名
+    char userAccount[MAX_NOTIFY_STR_LENGTH];  /// 当前屏幕控制者帐号
+};
+
+/**!
+* \brief
+*   取消共享控制的通知结构体
+*/
+struct plugin_notify_del_remote_control_privlege
+{
+    char userName[MAX_NOTIFY_STR_LENGTH];     /// 当前取消的屏幕控制者姓名
+    char userAccount[MAX_NOTIFY_STR_LENGTH];  /// 当前取消的屏幕控制者帐号
+};
+
+/**!
+* \brief
+*   程序共享程序信息
+*/
+struct plugin_notify_data_sharing_hwnd_info
+{
+    char shareHwndTitle[MAX_NOTIFY_STR_LENGTH]; /// 程序共享窗口名称
 };
 
 /**!
