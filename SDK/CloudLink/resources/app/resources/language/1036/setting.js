@@ -53,7 +53,7 @@ module.exports = {
     "DESKTOP_SHARE_SETTING": "Paramètres",
     "ARE_YOU_SURE_SAVE_DESKTOP_SHARING_SETTINGS": "Voulez-vous vraiment enregistrer les paramètres de partage de bureau ?",
     "IN_PREPARATION_FOR_DOWNLOAD": "Préparation du téléchargement… Veuillez patienter.",
-    "DOWNLOAD_UPGRADE_FILE": "Téléchargement en cours...",
+    "DOWNLOAD_UPGRADE_FILE": "Téléchargement en cours",
     "DOWNLOAD_ERROR": "Erreur de téléchargement.",
     "DOWNLOAD_AGAIN": "Télécharger à nouveau",
     "NETWORK_IS_NOT_WORKING": "La qualité du signal réseau est mauvaise.",

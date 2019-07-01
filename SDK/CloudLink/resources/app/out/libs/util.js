@@ -922,7 +922,7 @@ Array.prototype.queryList = function (opts) {
  */
 Array.prototype.splitByNum = function (num) {
   var retArr = [],
-    oldArr = this;
+    oldArr = [].concat(this);
   while (oldArr.length > num) {
     retArr.push(oldArr.splice(0, num));
   }
@@ -1775,3 +1775,16 @@ function formatDate(date) {
     return d.format("yyyy-MM-dd hh:mm");
   }
 }
+
+function getFileMediaType(fileName) {
+  var suffix = getSuffix(fileName);
+  if (['mp4', 'mpeg4', 'ogg'].indexOf(suffix) != -1) {
+    return constant.MEDIA_TYPE.VIDEO;
+  } else if (['wav'].indexOf(suffix) != -1 && window.CLIENTCONFIG.ISMOBILE) {
+    return constant.MEDIA_TYPE.AUDIO;
+  } else if (['png', 'jpg', 'jpeg', 'bmp', 'gif'].indexOf(suffix) != -1) {
+    return constant.MEDIA_TYPE.PHOTO;
+  }
+
+  return constant.MEDIA_TYPE.FILE;
+};
