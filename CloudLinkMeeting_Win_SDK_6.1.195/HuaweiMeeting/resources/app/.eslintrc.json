@@ -1,0 +1,121 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "globals": {
+    "$getState": true,
+    "$dispatch": true,
+    "handleIp":true,
+    "Noop": true,
+    "remote": true,
+    "PromiseObject": true,
+    "makeSure": true,
+    "delegate": true,
+    "win": true,
+    "isNullOrEmpty": true,
+    "throttle": true,
+    "language": true,
+    "showDealTime": true,
+    "getExistLangs": true,
+    "path": true,
+    "setLanguage": true,
+    "electron": true,
+    "fs": true,
+    "exec": true,
+    "spawn": true,
+    "archiver": true,
+    "LOG_LEVEL": true,
+    "LOG_LEVEL_TYPES": true,
+    "LOG_FILE_MAX_SIZE": true,
+    "APP_DATA_PATH": true,
+    "USER_DATA_PATH": true,
+    "LOG_PATH": true,
+    "EXEC_PATH": true,
+    "RING_PATH": true,
+    "EMOTION_PATH": true,
+    "VIDEO_DEFAULT_IMG": true,
+    "cordova": true,
+    "handlePhoneNumber": true,
+    "getRepeatCharMaxCount": true,
+    "getDifferenceCharsCount": true,
+    "getContactName": true,
+    "getContactDept": true,
+    "getContactNameByMessage": true,
+    "getPublicNoName":true,
+    "reactStopPropagation": true,
+    "coreAccount":true,
+    "coreCommon":true,
+    "coreIm":true,
+    "coreCall":true,
+    "coreSetting":true,
+    "coreTup":true,
+    "coreCwmp":true,
+    "coreHttp":true,
+    "coreDb":true,
+    "coreUi":true,
+    "coreSecurity":true,
+    "coreConf":true,
+    "coreSearch":true,
+    "appService":true,
+    "constant":true,
+    "coreContact":true,
+    "coreGroup":true,
+    "coreCommonComponent": true,
+    "CheckCompUpdate":true,
+    "ipcConstant": true,
+    "coreIpcChildProcess": true,
+    "coreIpcMainProcess": true,
+    "coreUt": true,
+    "corePlugin": true,
+    "requestAnimFrame": true,
+    "HwLazyUiPage": true,
+    "coreLazyMobileUiPage": true,
+    "Media": true,
+    "coreLog": true,
+    "coreLogger": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-empty": 2,
+    "no-console": 1,
+    "no-cond-assign": 0,
+    "no-case-declarations": 2,
+    "no-constant-condition": 2,
+    "no-unused-vars": 1,
+    "no-extra-semi": "warn",
+    "semi": "warn",
+    "react/prop-types": 1,
+    "max-nested-callbacks": [
+      1,
+      {
+        "max": 5
+      }
+    ],
+    "max-statements": [
+      1,
+      {
+        "max": 50
+      }
+    ],
+    "no-undef": 1,
+    "no-alert": "off",
+    "eqeqeq": "error"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
+}
