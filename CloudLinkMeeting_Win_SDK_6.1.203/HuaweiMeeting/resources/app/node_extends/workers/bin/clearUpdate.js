@@ -1,0 +1,1 @@
+var path=require("path"),unlinker=require("./deepRemove");module.exports=function(n,e){return Promise.resolve(e).then(function(e){var r=path.join(e,n);unlinker(r)})};

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <!-- <title>CloudLink</title> -->
+  <link href="./css/dStyle.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="root" style="overflow-x: hidden"></div>
+</body>
+<script>
+  var _selectedElem = null;
+  
+  function selectItem(elem) {
+    if (!_selectedElem) {
+      let selectedItem = document.querySelector('.window-item-active');
+      if (selectedItem) {
+        selectedItem.setAttribute('class', 'window-item');
+      }
+    } else {
+      _selectedElem.setAttribute('class', 'window-item');
+    }
+    elem.setAttribute('class', 'window-item-active');
+    _selectedElem = elem;
+  }
+  function handleItemClick(elem, indexObj) {
+    selectItem(elem);
+    window.require("electron").ipcRenderer.send("handleItemClick", indexObj);
+  }
+  function handleKeyDown(e) {
+    e.preventDefault();
+    var code = e.keyCode;
+    var brotherElem = null;
+    var index = parseInt(_selectedElem.dataset.index);
+    if (code === 13) {
+      window.require("electron").ipcRenderer.send("pressKeyDown", index);
+    } else {
+      if (code === 37) {
+        if (index) {
+          brotherElem = _selectedElem.previousElementSibling;
+        }
+      } else if (code === 38) {
+        if (index > 2) {
+          brotherElem = _selectedElem.parentNode.children[index - 3];
+        }
+      } else if (code === 39) {
+        var num = _selectedElem.parentNode.children.length;
+        if (index < num - 1) {
+          brotherElem = _selectedElem.nextElementSibling;
+        }
+      } else if (code === 40) {
+        var num = _selectedElem.parentNode.children.length;
+        if (index < num - 3) {
+          brotherElem = _selectedElem.parentNode.children[index + 3];
+        }
+      }
+      if (brotherElem) {
+        selectItem(brotherElem)
+        index = brotherElem.dataset.index;
+        window.require("electron").ipcRenderer.send("handleItemClick", { index: index });
+        var n = parseInt(index / 3);
+        if (n >= 3) {
+          _selectedElem.parentNode.scrollTop = n * 136
+        } else if (n === 1) {
+          _selectedElem.parentNode.scrollTop = 0
+        }
+      }
+    }
+    return false;
+  }
+  document.addEventListener('keydown', handleKeyDown);  
+</script>
+
+</html>

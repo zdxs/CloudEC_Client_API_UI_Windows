@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>CloudLink</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <!--<script src="bin/config/userConfig.js"></script>
+  <script src="start.js"></script>
+  <script src="YUVCanvas.js"></script>-->
+  <style>
+    .onfocusline {
+      width: 91%;
+      height: 1px;
+      background: #CCCCCC;
+      margin-top: 3px;
+    }
+    
+    #pyramid {
+      position: fixed;
+      margin: 10px auto;
+      height: 19px;
+      width: -2px;
+      top: 448px;
+      left: 35px;
+    }
+    
+    #pyramid>div {
+      position: absolute;
+      border-style: solid;
+      border-width: 8px 7px 0 7px;
+    }
+    
+    #pyramid>div:first-child {
+      border-color: rgba(50, 50, 50, 0.6) transparent transparent transparent;
+    }
+    
+    #conflinkshow {
+      position: fixed;
+      align-items: center;
+      padding: auto;
+      width: 200px;
+      height: 100px;
+      background-color: rgba(50, 50, 50, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="roottt"></div>
+  <div class="left-panel">
+    <textarea id="conflinkhide" style="
+    position: fixed;
+    top: -43px;" class="conf-link-hide">546564654564564</textarea>
+  </div>
+  <div id="conflinkshowcontrol" style="display:flex">
+    <div id="conflinkshow">
+      <p id="conflinkshowP" style="font-family: 'Roboto Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif;font-size: 12px;margin: 12px 9px;align-items: center;color: #FFFFFF;"></p>
+    </div>
+  </div>
+  <p style="
+    position: fixed;
+    top: -43px;" id='getlinkP'>322</p>
+</body>
+<script src="../resources/config/userConfig.js"></script>
+<script>
+  require('electron').ipcRenderer.on('getmeetinglink', (event, conflinkguest) => {debugger;document.getElementById('conflinkhide').innerHTML = conflinkguest})
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var appName = window.CLIENTCONFIG.NEW_APP_NAME;
+    if(window.langcode === "2052"){
+        appName = window.CLIENTCONFIG.NEW_APP_CHINEASE_NAME;
+      }
+    if (appName) {
+      document.title = appName
+    }
+  });
+</script>
+
+</html>

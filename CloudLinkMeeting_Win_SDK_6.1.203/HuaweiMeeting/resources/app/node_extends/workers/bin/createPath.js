@@ -1,0 +1,1 @@
+var fs=require("fs"),path=require("path");module.exports=function(t){for(var s=t.split(/[\\\/]+/),i=path.join(".",s.shift());fs.existsSync(i)&&s.length;)i=path.join(i,s.shift());for(;!fs.existsSync(i)&&(fs.mkdirSync(i),s.length);)i=path.join(i,s.shift())};

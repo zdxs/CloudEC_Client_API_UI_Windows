@@ -1,0 +1,1 @@
+var fs=require("fs"),path=require("path");module.exports=function n(i){if(fs.existsSync(i))return fs.statSync(i).isDirectory()?(fs.readdirSync(i).forEach(function(r){return n(path.join(i,r))}),fs.rmdirSync(i)):void fs.unlinkSync(i)};

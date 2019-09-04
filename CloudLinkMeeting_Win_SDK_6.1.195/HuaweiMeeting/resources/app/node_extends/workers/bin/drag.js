@@ -1,1 +1,0 @@
-module.exports=function(e,t,n,r){var a={x:e,y:t,width:n,height:r},i=this.webContents;return i.capturePage(a,function(e){i.startDrag({icon:e,file:" "}),i.executeJavaScript("var e=document.createEvent('Event');e.initEvent('dragend',true,true);document.body.dispatchEvent(e)")})};

@@ -1,1 +1,0 @@
-var CloudLinkBuildTime = "Fri Aug 02 2019 16:41:21 GMT+0800 (China Standard Time)";

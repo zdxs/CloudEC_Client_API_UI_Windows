@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>CloudLink</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <!--<script src="bin/config/userConfig.js"></script>
+  <script src="start.js"></script>
+  <script src="YUVCanvas.js"></script>-->
+</head>
+  <body>
+    <script src="../resources/config/userConfig.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var appName = window.CLIENTCONFIG.NEW_APP_NAME;
+        if(window.langcode === "2052"){
+          appName = window.CLIENTCONFIG.NEW_APP_CHINEASE_NAME;
+        }
+        if (appName) {
+          document.title = appName
+        }
+      });
+    </script>
+  </body>
+</html>
